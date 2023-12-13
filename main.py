@@ -6,10 +6,18 @@ INPUT_FOLDER = './input'
     
 def main():
     systemConfigCheck()
-    # data = pd.read_csv('./input/data.csv')
     dataFileName=getTargetDataFile(input_folder_path=INPUT_FOLDER)
     
-    data = pd.read_csv(f'{INPUT_FOLDER}/{dataFileName}')
+    #Convert using read_csv if dataFileName is a csv, otherwise use read_excel
+    if dataFileName.lower().endswith(".csv"):
+        data = pd.read_csv(f'{INPUT_FOLDER}/{dataFileName}')
+    elif dataFileName.lower().endswith(".xlsx"):
+        data = pd.read_excel(f'{INPUT_FOLDER}/{dataFileName}',engine='openpyxl')
+    else:
+        print("Error: File must be a csv or xlsx")
+        exit()
+    
+    
     # getTarget()
     columnToConvert, hoursToSubtract = getColumnNameAndSubtractHours(data)
     adjustedDataFrame = convertData(data, columnToConvert, hoursToSubtract)

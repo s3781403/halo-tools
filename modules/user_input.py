@@ -7,13 +7,13 @@ from modules.animations import doLoadingAnimation
 
 #Asks the user for the name of the file, from a list of files in the input folder
 def getTargetDataFile(input_folder_path):
-    #scan input folder for csv files
-    inputFiles = [file for file in os.listdir(input_folder_path) if file.lower().endswith(".csv")]
+    #scan input folder for csv/xlsx files
+    inputFiles = [file for file in os.listdir(input_folder_path) if file.lower().endswith(".csv") or file.lower().endswith(".xlsx")]
     
     if len(inputFiles) == 0:
-        print(f"{bcolors.FAIL}Error: No csv input file found{bcolors.ENDC}")
-        print('Please add a csv file to the input folder and try again')
-        time.sleep(5)
+        print(f"{bcolors.FAIL}Error: No csv/xlsx input file found{bcolors.ENDC}")
+        print('Please add a csv/xlsx file to the input folder and try again')
+        time.sleep(2)
         exit()
         
     elif len(inputFiles) > 1:
@@ -47,11 +47,15 @@ def getTargetDataFile(input_folder_path):
         print(f"{bcolors.OKGREEN}File selected: {inputFiles[0]}!{bcolors.ENDC}")
         return inputFiles[0]
 
+
+
+
+
 #Get user input for column name and hours to subtract
 def getColumnNameAndSubtractHours(data):
     while True:
         try:
-            columnToConvert = input('Enter the column name to convert (exact spelling): ')
+            columnToConvert = input('Enter the column name to convert: ')
             
             #Loading animation to make you think things are happening quickly
             doLoadingAnimation(phrase='Loading',num_iter=1)
@@ -67,7 +71,7 @@ def getColumnNameAndSubtractHours(data):
         try:
             hoursToSubtract = int(input('Enter the number of hours to subtract: '))
             if hoursToSubtract > 48 or hoursToSubtract < -48:
-                print(f"{bcolors.FAIL}Error: Number must be between 48 and -48")
+                print(f"{bcolors.FAIL}Error: Number must be between 48 and -48{bcolors.ENDC}")
                 hoursToSubtract=0
                 continue
             else: 
