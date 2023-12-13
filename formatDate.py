@@ -20,10 +20,12 @@ class bcolors:
     
 loading_chars = ['|', '/', '-', '\\']
 
+
 def displayFiles(files):
     print('Select from these options:')
     for i,fileName in enumerate(files):
         print(f"[{i}]: {fileName}")
+
 
 #check for input, ouptut and archive folders
 def systemConfigCheck():
@@ -33,6 +35,8 @@ def systemConfigCheck():
         os.makedirs('./out')
     if not os.path.exists('./archive'):
         os.makedirs('./archive')
+
+
 
 #Add a check here that asks the user for the name of the data file
 def getTarget():
@@ -76,6 +80,8 @@ def getTarget():
                 print(f"{bcolors.WARNING}Warning: Please enter a valid file name{bcolors.ENDC}")
                 continue
 
+
+
 #Get user input for column name and hours to subtract
 def getUserInput(data):
     while True:
@@ -108,6 +114,9 @@ def getUserInput(data):
     return columnToConvert, hoursToSubtract
 
 
+
+
+
 def convert(df, columnToConvert, hoursToSubtract):
     print(f"{bcolors.OKCYAN}Converting...{bcolors.ENDC}")
     
@@ -122,12 +131,17 @@ def convert(df, columnToConvert, hoursToSubtract):
 
     return df
     
-def export(df):
+    
+    
+    
+    
+def export(df, inputFileName):
     #Export the data to a new csv file with the date/time it was created in the name
     current_datetime = pd.to_datetime('now', utc=True).strftime('%y%m%d_%H%M%S')
     
     output_name = f'./out/data_{current_datetime}.csv'
-    archive_name = f'./archive/data_{current_datetime}.csv'
+    archive_name = f'./archive/{inputFileName.rstrip(".csv")}_{current_datetime}.csv'
+    
     try:
         #Convert dataFrame to CSV and export it, Move the input file to the archive folder
         df.to_csv(output_name, index=False)
@@ -140,19 +154,19 @@ def export(df):
         print(f"{bcolors.FAIL}Error: Something went wrong{bcolors.ENDC}")
         print(e)
         
-    # os.rename(f'./input/{inputFileName}.csv', archive_name)
-    
+    os.rename(f"./input/{inputFileName}", archive_name)
     
     
 def main():
     systemConfigCheck()
     # data = pd.read_csv('./input/data.csv')
-    data=getTarget()
+    dataFileName=getTarget()
+    data = pd.read_csv(f'{input_folder}/{dataFileName}')
     # getTarget()
     columnToConvert, hoursToSubtract = getUserInput(data)
     adjustedDataFrame = convert(data, columnToConvert, hoursToSubtract)
     
-    export(adjustedDataFrame)
+    export(adjustedDataFrame, dataFileName)
     
 
 
