@@ -16,7 +16,7 @@ Ideally, additional tools will then be incorporated into the project.
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
-    - [Method One](#method-one)
+    - [Method One (Not yet available)](#method-one-not-yet-available)
     - [Method Two](#method-two)
   - [Usage](#usage)
   - [Contributing](#contributing)
@@ -24,7 +24,7 @@ Ideally, additional tools will then be incorporated into the project.
 
 ## Installation
 
-### Method One
+### Method One (Not yet available)
 Use the executable file in the dist folder. 
 
 [1] Download the dist folder.
@@ -40,7 +40,7 @@ Run the project from source.
 
 [3] Install the required packages by running `pip install -r requirements.txt` in the project directory.
 
-[4] Run the project by running `python3 formatDate.py` in the project directory.
+[4] Run the project by running `python3 main.py` in the project directory.
 
 
 ## Usage

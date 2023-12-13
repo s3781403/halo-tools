@@ -11,13 +11,14 @@ def displayFiles(files):
 
 #check for input, ouptut and archive folders
 def systemConfigCheck():
-    print(f"{bcolors.OKCYAN}Doing initial setup...{bcolors.ENDC}")
+    print(f"\r{bcolors.OKCYAN}Doing initial setup...{bcolors.ENDC}")
     if not os.path.exists('./input'):
         os.makedirs('./input')
     if not os.path.exists('./out'):
         os.makedirs('./out')
     if not os.path.exists('./archive'):
         os.makedirs('./archive')
+    print(f"\r{bcolors.OKGREEN}Setup complete!{bcolors.ENDC}")
         
 
 def convertData(df, columnToConvert, hoursToSubtract):
