@@ -1,5 +1,5 @@
-# Project Name
-Halo Tools
+# Halo Tools
+
 
 ## Description
 Currently an obsessively complex way to format a date in a csv file and then output it into a new file.
@@ -12,7 +12,7 @@ Ideally, additional tools will then be incorporated into the project.
 
 ## Table of Contents
 
-- [Project Name](#project-name)
+- [Halo Tools](#halo-tools)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Installation](#installation)
