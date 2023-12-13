@@ -1,0 +1,8 @@
+# FILEPATH: /home/ohale/halo/tools/.gitignore
+
+# Python
+*.pyc
+__pycache__/
+
+# CSV files
+*.csv
