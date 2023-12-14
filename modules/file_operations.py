@@ -2,6 +2,7 @@ import os
 import pandas as pd
 from modules.colors import bcolors
 from time import sleep
+from modules.animations import doLoadingAnimation
 
 def displayFiles(files):
     print('Select from these options:')
@@ -57,7 +58,9 @@ def export(df, inputFileName):
         
         print(f"{bcolors.OKGREEN}\n-----Success!-----{bcolors.ENDC}")
         print('Data has been formatted and exported to a new file in ./out/ - marked by date/time processed.')
-        print('Check the "out" folder for your new file!')
+        print('The original file has been moved to the archive folder.')
+        print('Go check the "out" folder for your new file!')
+        doLoadingAnimation(phrase='Shutting Down', num_iter=1, loading_chars=['3','2','1','0'],sleep_duration=1)
     except Exception as e:
         print(f"{bcolors.FAIL}Error: Something went wrong{bcolors.ENDC}")
         print(e)
