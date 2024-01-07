@@ -1,0 +1,11 @@
+﻿Ticket Type,label,type,new_values,Mandatory (Y/N),Agent Only
+Incident,Summary,Text,,Y,N
+Incident,Details,Rich,,Y,N
+Incident,Category,Single Select,Category Module,Y,Y
+Incident,Impact,Single Select,"Organisation Wide,Multiple Users Affected,Single User Affected",Y,Y
+Incident,Urgency,Single Select,"High,Medium,Low",Y,Y
+Incident,Asset,,,N,N
+Incident,Hardware Incident Type,Single Select,"Faulty,Damaged,Lost,Other",Y,N
+Incident,Device Category,Single Select,"User,Infrastructure",Y,N
+Incident,User Device Type,Single Select,"Charger,Desk Phone,Desktop PC,Dock,iPad,Laptop,Mifare Card,Mobile Phone,Monitor,Peripherals,Surface Pro,VR headset,Other",Y,N
+Incident,Infrastructure Device Type,Single Select,"Charging Station/Trolley,Commbox,Firewall,Printer,Projector,Security Cameras,Server,Storage,Switch,TV,UPS,Vivi,Wifi Access Point,Other",Y,N
