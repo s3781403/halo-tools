@@ -5,8 +5,8 @@
 - [Halo Tools](#halo-tools)
   - [Table of Contents](#table-of-contents)
   - [Installation \& How to Use](#installation--how-to-use)
-    - [Method One (Recommended)](#method-one-recommended)
-    - [Method Two](#method-two)
+    - [Method One](#method-one)
+    - [Optional Steps](#optional-steps)
   - [Description](#description)
   - [Usage](#usage)
   - [Contributing](#contributing)
@@ -15,40 +15,37 @@
 
 ## Installation & How to Use
 
-### Method One (Recommended)
-Use the executable file in the dist folder. 
-
-[1] Download the dist folder from the github repository (unzip it if necessary).
-
-[2] Click into the "main" folder.
-
-[3] Run the executable file.
-
-[4] The program will create the required folder structure in the same directory as the executable file.
-
-[5] Place the csv file you want to edit in the input folder.
-
-[6] Run the executable file again.
-
-[7] Select the file you want to edit.
-
-[8] Select the column you want to edit (make sure its a date/time friendly column - no processing occurs to filter out your ugly values yet).
-
-[9] Select the number of hours you want to adjust the column by.
-
-[10] The program will output the edited file to the output folder.
-
-### Method Two
-Run the project from source. 
+### Method One
 
 [1] Clone the repository to your local machine.
 
 [2] Ensure you have python3 installed on your system (if you don't, you can download it [here](https://www.python.org/downloads/)).
 
-[3] Install the required packages by running `pip install -r requirements.txt` in the project directory.
+[3] Install the required packages by running `pip install -r requirements.txt` in the project directory in your terminal
 
 [4] Run the project by running `python3 main.py` in the project directory.
+  
+[5] The program will create the required folder structure in the same directory as the executable file.
 
+[6] Place the csv/xlsx file(s) you want to edit in the input folder.
+
+[7] Run the program again (`python3 main.py`).
+
+[8] Select the file you want to edit.
+
+[9] Enter the column you want to edit (make sure its a date/time friendly column - no processing occurs to filter out your ugly values yet).
+
+[10] Enter the number of hours you want to adjust the column by.
+
+[11] The program will output the edited file to the output folder.
+
+
+### Optional Steps
+[1] (Optional) Install pyinstaller (run `pip install pyinstaller` in your terminal)
+
+[2] (Optional) Create an executable file by running `pyinstaller main.py` in the halo-tools folder.
+
+[3] (Optional) Run the executable file in the dist/main folder that is created.
 
 ## Description
 Currently an obsessively complex way to format a date column in a csv file and then output it into a new file.
