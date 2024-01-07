@@ -48,6 +48,7 @@ def structureData(df):
         df_row_list.append(json_obj)
     
     print(df_row_list[1])
+    #Michael helped write this part
     
 
     
