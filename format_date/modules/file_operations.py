@@ -31,7 +31,8 @@ def convertData(df, columnToConvert, hoursToSubtract):
         #Subtract specified number of hours from the column
         df[columnToConvert] = df[columnToConvert] - pd.Timedelta(hours=hoursToSubtract)
         #Format the dates into the desired form
-        df[columnToConvert] = pd.to_datetime(df[columnToConvert], format='%Y/%m/%dT%H:%M:%S')
+        df[columnToConvert] = df[columnToConvert].dt.strftime('%Y-%m-%dT%H:%M:%S')
+        # df['ActionDate'] = df['ActionDate'].dt.strftime('%Y-%m-%dT%H:%M:%S')
         
     except Exception as e :
         print(f"{bcolors.FAIL}Error: Failed to convert column to datetime. Double-check there aren't any strange values.{bcolors.ENDC}")

@@ -15,7 +15,7 @@ build/
 input/*
 output/*
 archive/*
-
+out/*
 .vscode/*
 
 _internal/
@@ -26,3 +26,6 @@ dist/
 *.rar
 
 *.zip
+
+
+_variables.json
