@@ -1,2 +1,20 @@
-2024-01-16 08:17:42,697 - INFO: Status code: 201
- Result: {"id":194,"guid":"071bcab8-2833-4b5c-9fd4-763ebc90ec6c","name":"CFInfrastructureDeviceType","label":"Infrastructure Device Type","summary":"","hint":"","lookup":133,"type":2,"custom":1,"usage":1,"tab_id":0,"addunknown":false,"extratype":1,"characterlimit":0,"characterlimittype":0,"inputtype":0,"searchable":false,"user_searchable":true,"calendar_searchable":true,"ordervaluesalphanumerically":true,"ordervalueby":0,"new_values":"Charging Station/Trolley,Commbox,Firewall,Printer,Projector,Security Cameras,Server,Storage,Switch,TV,UPS,Vivi,Wifi Access Point,Other","showintable":true,"visibility":1,"showondetailsscreen":false,"selection_field_id":0,"customextratableid":0,"deleteafterclosure":false,"deleteafterclosuredays":-1,"defaultdate":0,"calculation":"","regex":"","mandatory":false,"access_control":[{"id":120,"entity":"fieldinfo","entity_id":194,"type":0,"agent_id":3,"user_id":0,"role_id":0,"team_id":0,"department_id":0,"level":3}],"access_control_level":3,"inherit_ac_from_tickettype":false,"is_horizontal":false}
+2024-01-16 13:03:11,612 - INFO: ====================
+GET REQUEST PERFORMED
+===================
+Status code: 200
+
+2024-01-16 13:04:04,798 - INFO: ====================
+GET REQUEST PERFORMED
+===================
+Status code: 200
+
+2024-01-16 13:04:41,538 - INFO: ====================
+GET REQUEST PERFORMED
+===================
+Status code: 200
+
+2024-01-16 13:11:23,069 - INFO: ====================
+GET REQUEST PERFORMED
+===================
+Status code: 200
+
