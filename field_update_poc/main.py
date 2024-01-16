@@ -1,7 +1,6 @@
 import json
 import os
 import pandas as pd
-import requests
 import logging
 from modules.utilities.api import postToAPI, getFromAPI
 
@@ -82,11 +81,7 @@ def main():
     # postToAPI(fieldJson, 'fieldinfo')
     
     #Add the new fields to the ticket types
-    
-    
-    
-    
-
+     
 
 
 if __name__ == "__main__":
