@@ -4,8 +4,6 @@ import pandas as pd
 import logging
 from modules.utilities.api import postToAPI, getFromAPI
 
-from field_update_poc.modules.utilities.config import API_TOKEN
-
 INPUT_FOLDER = './input'
 
 
@@ -23,6 +21,7 @@ logging.basicConfig(filename='api_log.txt', level=logging.INFO, format='%(asctim
 #TO DO: Pull the format_date excel selector into a library and use here instead
 def importData():
     dataFileName = "./field_update_poc/test2.csv"
+
     
     if dataFileName.lower().endswith(".csv"):
         data = pd.read_csv(f'{dataFileName}')
@@ -81,7 +80,7 @@ def main():
     # postToAPI(fieldJson, 'fieldinfo')
     
     #Add the new fields to the ticket types
-     
+    getFromAPI()
 
 
 if __name__ == "__main__":

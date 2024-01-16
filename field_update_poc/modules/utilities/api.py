@@ -1,7 +1,7 @@
 import requests
 import logging
-from field_update_poc.modules.utilities.config import API_TOKEN
-from main import excluded_fields
+from modules.utilities.config import API_TOKEN
+
 
 
 #Sends data to the api via a hardcoded url
